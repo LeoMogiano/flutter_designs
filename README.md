@@ -13,4 +13,4 @@ This design is inspired by the Bankly app. The design is a simple banking app th
 
 | **Home** |
 |:-----------------------:|
-| ![Home](./screenshots/s1.png) | 
+| <img src="./screenshots/s1.png" width="200"> | 
