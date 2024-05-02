@@ -11,47 +11,50 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 80,
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            RichText(
-              text: const TextSpan(
-                text: 'Hello ',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 26,
+        title: Container(
+          margin:  EdgeInsets.symmetric(horizontal: phoneWidth * 0.02),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              RichText(
+                text: const TextSpan(
+                  text: 'Hello ',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 26,
+                  ),
+                  children: [
+                    TextSpan(
+                        text: 'Leo',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  ],
                 ),
-                children: [
-                  TextSpan(
-                      text: 'Bankly',
-                      style: TextStyle(fontWeight: FontWeight.bold)),
-                ],
               ),
-            ),
-            SizedBox(width: phoneWidth * 0.25),
-            Row(
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    border: Border.all(
-                        color: const Color.fromARGB(255, 189, 189, 189),
-                        width: 1),
+              
+              Row(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(
+                          color: const Color.fromARGB(255, 189, 189, 189),
+                          width: 1),
+                    ),
+                    child: const Padding(
+                      padding: EdgeInsets.all(11.0),
+                      child: Icon(Icons.notifications_none_outlined,
+                          size: 30, color: Colors.black),
+                    ),
                   ),
-                  child: const Padding(
-                    padding: EdgeInsets.all(11.0),
-                    child: Icon(Icons.notifications_none_outlined,
-                        size: 30, color: Colors.black),
+                  SizedBox(width: phoneWidth * 0.02),
+                  ProfilePhoto(
+                    width: phoneWidth * 0.12,
+                    height: phoneWidth * 0.12,
                   ),
-                ),
-                SizedBox(width: phoneWidth * 0.02),
-                ProfilePhoto(
-                  width: phoneWidth * 0.12,
-                  height: phoneWidth * 0.12,
-                ),
-              ],
-            )
-          ],
+                ],
+              )
+            ],
+          ),
         ),
       ),
       body: Center(
