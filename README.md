@@ -1,16 +1,16 @@
-# bankly
+# Flutter Designs
 
-A new Flutter project.
+This repository contains a collection of Flutter designs that I have created. The designs are inspired by various sources and are not meant to be exact replicas. The designs are created using Flutter and are not backed by any API. The designs are created for educational purposes and to showcase my Flutter skills.
 
-## Getting Started
+## Designs
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## 1. Bankly
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+This design is inspired by the Bankly app. The design is a simple banking app that allows users to view their account balance, transfer money, and view their transaction history.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Screenshots
+
+| **Home** |
+|:-----------------------:|
+| ![Home](./screenshots/s1.png) | 
