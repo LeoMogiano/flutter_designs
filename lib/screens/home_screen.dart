@@ -1,5 +1,5 @@
+import 'package:bankly/screens/balance_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -104,14 +104,22 @@ class HomeScreen extends StatelessWidget {
                           color: Colors.black)
                       ),
 
-                      Container(
-                        decoration: BoxDecoration(
-                          color: const Color(0xFFE3FB0F),
-                          borderRadius: BorderRadius.circular(10),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => const BalanceScreen()),
+                          );
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: const Color(0xFFE3FB0F),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          width: phoneWidth * 0.18,
+                          height: phoneHeight * 0.05,
+                          child: const Icon(Icons.arrow_forward, size: 30, color: Colors.black),
                         ),
-                        width: phoneWidth * 0.18,
-                        height: phoneHeight * 0.05,
-                        child: const Icon(Icons.arrow_forward, size: 30, color: Colors.black),
                       ),
                     ],
                   ), 
