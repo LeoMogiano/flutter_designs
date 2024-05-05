@@ -315,14 +315,16 @@ class _CustomLineChartState extends State<CustomLineChart> {
                 FlSpot(11, 4),
                 FlSpot(12.5, 5),
                 FlSpot(14.5, 3),
-                FlSpot(16.4, 4),
+                FlSpot(16.4, 5.6),
                 FlSpot(18, 3),
                 FlSpot(19, 4),
                 FlSpot(20, 3),
                 FlSpot(21, 4),
                 FlSpot(22, 5),
                 FlSpot(23, 3),
+
               ],
+              
               isCurved: true,
               gradient: const LinearGradient(
                 colors: [
@@ -330,11 +332,24 @@ class _CustomLineChartState extends State<CustomLineChart> {
                   Colors.black,
                 ]
               ),
-              barWidth: 4,
+              barWidth: 2,
+
               isStrokeCapRound: true,
-              dotData: const FlDotData(
-                show: false,
-              ),
+              dotData: FlDotData(
+              show: true,
+              getDotPainter: (spot, percent, barData, index) {
+                if (spot == const FlSpot(16.4, 5.6)) {
+                  return FlDotCirclePainter(
+                    radius: 5,
+                    color: Colors.black,
+                  );
+                } else {
+                  return FlDotCirclePainter(
+                    radius: 0, // invisible
+                  );
+                }
+              },
+            ),
               belowBarData: BarAreaData(
                 show: true,
                 gradient: LinearGradient(
