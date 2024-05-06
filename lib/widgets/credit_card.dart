@@ -16,6 +16,7 @@ class CreditCard extends StatelessWidget {
     return Container(
       width: phoneWidth * 0.9,
       height: phoneHeight * 0.22,
+      padding: const EdgeInsets.symmetric(horizontal: 20),
       decoration: BoxDecoration(
         color: const Color(0xFFE3FB0F),
         borderRadius: BorderRadius.circular(20),
@@ -23,7 +24,7 @@ class CreditCard extends StatelessWidget {
       child: Column(children: [
         SizedBox(height: phoneHeight * 0.03),
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             SizedBox(
               width: phoneWidth * 0.3,
@@ -71,7 +72,7 @@ class CreditCard extends StatelessWidget {
         SizedBox(height: phoneHeight * 0.038),
         Row(
           children: [
-            SizedBox(width: phoneWidth * 0.08),
+            
             Text("Balance",
                 style: TextStyle(
                     fontSize: 14,
@@ -84,7 +85,7 @@ class CreditCard extends StatelessWidget {
         ),
         SizedBox(height: phoneHeight * 0.01),
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             const Text("\$ 24,000.98",
                 style: TextStyle(
