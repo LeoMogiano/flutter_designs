@@ -73,7 +73,11 @@ class BalanceScreenState extends State<BalanceScreen> {
                     Column(
                       children: [
                         Container(
-                          padding: const EdgeInsets.only(left: 20, right: 20, top: 40),
+                          padding: EdgeInsets.only(
+                            left: MediaQuery.of(context).size.width * 0.05,
+                            right: MediaQuery.of(context).size.width * 0.05,
+                            top: MediaQuery.of(context).size.height * 0.034
+                          ),
                           child: const Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
