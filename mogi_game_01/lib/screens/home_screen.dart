@@ -22,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Mogi Game',
+              'Tic Tac Toe',
               style: TextStyle(
                 color: whiteColor,
                 fontSize: 40,

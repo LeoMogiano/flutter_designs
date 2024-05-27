@@ -14,3 +14,14 @@ This design is inspired by the Bankly app. The design is a simple banking app th
 | **Home** | **Balance** |
 |:-----------------------:|:-----------------------:|
 | <img src="./screenshots/s1.png" width="200"> | <img src="./screenshots/s2.png" width="200"> |
+
+
+## 2. Tic Tac Toe
+
+This design is inspired by the Tic Tac Toe game. The design is a simple Tic Tac Toe game that allows users to play against each other.
+
+## Screenshots
+
+| **Home** | **Game** |
+|:-----------------------:|:-----------------------:|
+| <img src="./screenshots/s3.png" width="200"> | <img src="./screenshots/s4.png" width="200"> |

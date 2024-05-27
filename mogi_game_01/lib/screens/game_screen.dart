@@ -41,7 +41,7 @@ class _GameScreenState extends State<GameScreen> {
         backgroundColor: AppColors.blueDarkColor,
         appBar: AppBar(
           backgroundColor: AppColors.blueColor,
-          title: const Text('Tic Tac Toe'),
+          title: const Text('Mogi Game 01'),
         ),
         body: SafeArea(
           child: Center(
