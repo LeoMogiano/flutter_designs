@@ -1,6 +1,5 @@
-
 import 'package:flutter/material.dart';
-
+import 'package:education_app/utils.dart/utils.dart';
 class EduInfo extends StatelessWidget {
   const EduInfo({
     super.key,
@@ -20,7 +19,7 @@ class EduInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width * 0.42,
+      width: MediaQuery.of(context).size.width * 0.43,
       height: MediaQuery.of(context).size.height * 0.21,
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
@@ -37,7 +36,7 @@ class EduInfo extends StatelessWidget {
                 style: const TextStyle(
                   fontSize: 18,
                   height: 1.35,
-                  color: Colors.black,
+                  color: AppColors.blackText,
                   fontWeight: FontWeight.bold,
                 ),
               ),

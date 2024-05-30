@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class UserPhoto extends StatelessWidget {
@@ -9,31 +8,28 @@ class UserPhoto extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 52,
+      width: 60,
+      height: 50,
       child: Stack(
         children: [
           Container(
-            padding: const EdgeInsets.all(14),
             decoration: BoxDecoration(
               border: Border.all(
-                color: Colors.black,
                 width: 2,
+                color: Colors.black,
               ),
-              color: Colors.green[50],
               shape: BoxShape.circle,
             ),
-            child: const Text(
-              'L',
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
+            child: ClipOval(
+              child: Image.network(
+                'https://avatars.githubusercontent.com/u/91585994?s=400&u=4db9af5fde852377be7e0c8ad2c0ff14293f84c4&v=4',
+                 fit: BoxFit.cover,
               ),
             ),
           ),
           Positioned(
-            top: 0,
-            right: 0,
+            top: -5,
+            right: 2,
             child: Container(
               padding: const EdgeInsets.all(8),
               decoration: const BoxDecoration(
@@ -43,9 +39,9 @@ class UserPhoto extends StatelessWidget {
               child: const Text(
                 '1',
                 style: TextStyle(
-      color: Colors.white,
-      fontSize: 10,
-      fontWeight: FontWeight.bold,
+                  fontSize: 10,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
             ),

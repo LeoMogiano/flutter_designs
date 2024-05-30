@@ -1,0 +1,1 @@
+export 'package:education_app/utils.dart/app_colors.dart';

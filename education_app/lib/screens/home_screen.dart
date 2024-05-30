@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:education_app/utils.dart/utils.dart';
 import 'package:education_app/widgets/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -6,12 +7,14 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.backgroundColor,
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: AppColors.backgroundColor,
         title: SizedBox(
-          width: MediaQuery.of(context).size.width * 0.90,
+          width: screenWidth * 0.90,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -40,12 +43,12 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Center(
         child: SizedBox(
-          width: MediaQuery.of(context).size.width * 0.90,
-          child: const Column(
+          width: screenWidth * 0.90,
+          child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              SizedBox(height: 30),
-              Row(
+              const SizedBox(height: 30),
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                    Text(
@@ -53,33 +56,233 @@ class HomeScreen extends StatelessWidget {
                    style: TextStyle(
                      height: 1.3,
                      fontSize: 40,
-                     color: Colors.black,
+                     color: AppColors.blackText,
                      fontWeight: FontWeight.bold,
                    ),
                  ),
                 ],
               ),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   EduInfo(
-                    color: Color(0xFFF8E9C8),
-                    color2: Color(0xFFE8DAB2),
+                    color: AppColors.yellow,
+                    color2: AppColors.yellowDark,
                     text: 'Days\n in training',
                     count: '255',
                     streak: '24 days in a row',
                   ),
                   EduInfo(
-                    color: Color(0xFFDEECEC),
-                    color2: Color(0xFFC7D8E3),
+                    color: AppColors.green,
+                    color2: AppColors.greenDark,
                     text: 'Completed\n courses',
                     count: '12',
                     streak: '2 in this month',
                   ),
                 ],
+              ),
+
+              const SizedBox(height: 30),
+
+              Container(
+                height: screenHeight * 0.35,
+                padding: const EdgeInsets.all(20),
+                decoration: BoxDecoration(
+                  color: const Color(0xFFf6f6f6),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Column(
+                  
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        const Text(
+                          'Today classes',
+                          style: TextStyle(
+                            fontSize: 22,
+                            color: AppColors.blackText,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Container(
+                          decoration: const BoxDecoration(
+                            color: Colors.white,
+                            shape: BoxShape.circle
+                          ),
+                          child: IconButton(
+                            onPressed: () {},
+                            icon: const Icon(
+                              Icons.arrow_forward_outlined,
+                              color: AppColors.blackText,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    
+
+                    Column(
+                      
+                      children: [
+                        
+                        Container(
+                          width: screenWidth * 0.8,
+                          height: screenHeight * 0.1,
+                          margin: const EdgeInsetsDirectional.only(top: 10),
+                          decoration: BoxDecoration(
+                            color: AppColors.green,
+                            borderRadius: BorderRadius.circular(15)
+                          ),
+                          child:  Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                children: [
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      vertical: 4,
+                                      horizontal: 10,
+                                    ),
+                                    width: screenWidth * 0.6,
+                                    height: screenHeight * 0.07,
+                                    
+                                    child: const Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Align(
+                                          alignment: Alignment.centerLeft,
+                                          child: Text(
+                                            'Design System in Flutter',
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.black,
+                                              fontSize: 16,
+                                              
+                                            ),
+                                          ),
+                                        ),
+                                        Align(
+                                          alignment: Alignment.centerLeft,
+                                          child: Text(
+                                            'On going - Leo M.',
+                                            style: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: 12.5,
+                                              
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  Container(
+                                    padding: const EdgeInsets.all(10),
+                                    
+                                    decoration: const BoxDecoration(
+                                      color: AppColors.greenDark,
+                                      shape: BoxShape.circle
+                                    ),
+                                    child: const Icon(
+                                      Icons.design_services,
+                                      color: Colors.black,
+                                    ),
+                                    
+                                  )
+                                  
+                                ],
+                              )
+                            ],
+                          )
+                        ),
+                    
+                        Container(
+                          width: screenWidth * 0.8,
+                          height: screenHeight * 0.1,
+                          margin: const EdgeInsetsDirectional.only(top: 10),
+                          decoration: BoxDecoration(
+                            color: AppColors.purple,
+                            borderRadius: BorderRadius.circular(15)
+                          ),
+                          child:  Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                children: [
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      vertical: 4,
+                                      horizontal: 10,
+                                    ),
+                                    width: screenWidth * 0.6,
+                                    height: screenHeight * 0.07,
+                                    
+                                    child: const Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Align(
+                                          alignment: Alignment.centerLeft,
+                                          child: Text(
+                                            'Developing with Dart',
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.black,
+                                              fontSize: 16,
+                                              
+                                            ),
+                                          ),
+                                        ),
+                                        Align(
+                                          alignment: Alignment.centerLeft,
+                                          child: Text(
+                                            '2:00 PM - Leo M.',
+                                            style: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: 12.5,
+                                              
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  Container(
+                                    padding: const EdgeInsets.all(10),
+                                    
+                                    decoration: const BoxDecoration(
+                                      color: AppColors.purpleDark,
+                                      shape: BoxShape.circle
+                                    ),
+                                    child: const Icon(
+                                      Icons.logo_dev,
+                                      color: Colors.black,
+                                    
+                                    ),
+                                    
+                                  )
+                                  
+                                ],
+                              )
+                            ],
+                          )
+                        ),
+                    
+                        
+                    
+                        
+                    
+                        
+                      ],
+                    )
+                  
+                  ],
+                )
               )
+
               
             ],
           ),
