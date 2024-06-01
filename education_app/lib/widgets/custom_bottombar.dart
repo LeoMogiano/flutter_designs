@@ -13,14 +13,12 @@ class CustomBottomBar extends StatelessWidget {
       alignment: Alignment.topCenter,
       height: MediaQuery.of(context).size.height * 0.12,
       decoration: BoxDecoration(
-      
         border: Border(
           top: BorderSide(
             color: Colors.grey[400]!,
             width: 0.75,
           ),
         ),
-        
       ),
       child: Column(
         children: [
