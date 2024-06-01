@@ -1,3 +1,4 @@
+import 'package:education_app/screens/education_screens.dart';
 import 'package:flutter/material.dart';
 import 'package:education_app/utils.dart/utils.dart';
 import 'package:education_app/widgets/widgets.dart';
@@ -57,7 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
               const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                   Text(
+                 Text(
                    'Nice streak,\n Leo',
                    style: TextStyle(
                      height: 1.3,
@@ -88,7 +89,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ],
               ),
-              const SizedBox(height: 30),
+              const SizedBox(height: 26),
               Container(
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
@@ -114,7 +115,14 @@ class _HomeScreenState extends State<HomeScreen> {
                             shape: BoxShape.circle
                           ),
                           child: IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const ClassesScreen(),
+                                ),
+                              );
+                            },
                             icon: const Icon(
                               Icons.arrow_forward_outlined,
                               color: AppColors.blackText,
@@ -148,7 +156,9 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       ),
-      bottomNavigationBar: const CustomBottomBar(),
+      bottomNavigationBar: const CustomBottomBar(
+        selectedIndex: 0,
+      ),
     );
   }
 }

@@ -5,14 +5,19 @@ import 'package:flutter/material.dart';
 class CustomBottomBar extends StatelessWidget {
   const CustomBottomBar({
     super.key,
+    required this.selectedIndex,
   });
+
+  final int selectedIndex;
 
   @override
   Widget build(BuildContext context) {
     return Container(
+
       alignment: Alignment.topCenter,
       height: MediaQuery.of(context).size.height * 0.12,
       decoration: BoxDecoration(
+        color: AppColors.backgroundColor,
         border: Border(
           top: BorderSide(
             color: Colors.grey[400]!,
@@ -23,32 +28,32 @@ class CustomBottomBar extends StatelessWidget {
       child: Column(
         children: [
           SizedBox(height: MediaQuery.of(context).size.height * 0.015),
-          const Row(
+          Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               OptionsBar(
-                color: AppColors.blackText,
+                color: (selectedIndex == 0) ? AppColors.blackText : Colors.white,
                 icon: Icons.home_outlined,
                 iconSize: 30,
-                iconColor: Colors.white,
+                iconColor: (selectedIndex == 0) ? Colors.white : Colors.black,
               ),
               OptionsBar(
-                color: Colors.white,
+                color: (selectedIndex == 1) ? AppColors.blackText : Colors.white,
                 icon: Icons.calendar_month_outlined,
                 iconSize: 30,
-                iconColor: Colors.black,
+                iconColor: (selectedIndex == 1) ? Colors.white : Colors.black,
               ),
               OptionsBar(
-                color: Colors.white,
+                color: (selectedIndex == 2) ? AppColors.blackText : Colors.white,
                 icon: Icons.notifications_none_outlined,
                 iconSize: 30,
-                iconColor: Colors.black,
+                iconColor: (selectedIndex == 2) ? Colors.white : Colors.black,
               ),
               OptionsBar(
-                color: Colors.white,
+                color: (selectedIndex == 3) ? AppColors.blackText : Colors.white,
                 icon: Icons.person_outline,
                 iconSize: 30,
-                iconColor: Colors.black,
+                iconColor: (selectedIndex == 3) ? Colors.white : Colors.black,
               ),
             ],
           ),
