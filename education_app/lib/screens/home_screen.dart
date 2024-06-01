@@ -2,9 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:education_app/utils.dart/utils.dart';
 import 'package:education_app/widgets/widgets.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
@@ -63,7 +69,6 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 30),
-              
               const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -83,18 +88,14 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
-
               const SizedBox(height: 30),
-
               Container(
-                height: screenHeight * 0.35,
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
                   color: const Color(0xFFf6f6f6),
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Column(
-                  
                   children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -121,173 +122,33 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ),
                       ],
-                    ),
-                    
-
-                    Column(
-                      
+                    ), 
+                    const Column(
                       children: [
-                        
-                        Container(
-                          width: screenWidth * 0.8,
-                          height: screenHeight * 0.1,
-                          margin: const EdgeInsetsDirectional.only(top: 10),
-                          decoration: BoxDecoration(
-                            color: AppColors.green,
-                            borderRadius: BorderRadius.circular(15)
-                          ),
-                          child:  Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                                children: [
-                                  Container(
-                                    padding: const EdgeInsets.symmetric(
-                                      vertical: 4,
-                                      horizontal: 10,
-                                    ),
-                                    width: screenWidth * 0.6,
-                                    height: screenHeight * 0.07,
-                                    
-                                    child: const Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children: [
-                                        Align(
-                                          alignment: Alignment.centerLeft,
-                                          child: Text(
-                                            'Design System in Flutter',
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                              color: Colors.black,
-                                              fontSize: 16,
-                                              
-                                            ),
-                                          ),
-                                        ),
-                                        Align(
-                                          alignment: Alignment.centerLeft,
-                                          child: Text(
-                                            'On going - Leo M.',
-                                            style: TextStyle(
-                                              color: Colors.black,
-                                              fontSize: 12.5,
-                                              
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                  Container(
-                                    padding: const EdgeInsets.all(10),
-                                    
-                                    decoration: const BoxDecoration(
-                                      color: AppColors.greenDark,
-                                      shape: BoxShape.circle
-                                    ),
-                                    child: const Icon(
-                                      Icons.design_services,
-                                      color: Colors.black,
-                                    ),
-                                    
-                                  )
-                                  
-                                ],
-                              )
-                            ],
-                          )
+                        ClassInfo(
+                          title: 'Design system in Figma',
+                          subtitle: 'On going - Leo M.',
+                          icon: Icons.design_services,
+                          color: AppColors.green,
+                          iconColor: AppColors.greenDark,
                         ),
-                    
-                        Container(
-                          width: screenWidth * 0.8,
-                          height: screenHeight * 0.1,
-                          margin: const EdgeInsetsDirectional.only(top: 10),
-                          decoration: BoxDecoration(
-                            color: AppColors.purple,
-                            borderRadius: BorderRadius.circular(15)
-                          ),
-                          child:  Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                                children: [
-                                  Container(
-                                    padding: const EdgeInsets.symmetric(
-                                      vertical: 4,
-                                      horizontal: 10,
-                                    ),
-                                    width: screenWidth * 0.6,
-                                    height: screenHeight * 0.07,
-                                    
-                                    child: const Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children: [
-                                        Align(
-                                          alignment: Alignment.centerLeft,
-                                          child: Text(
-                                            'Developing with Dart',
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                              color: Colors.black,
-                                              fontSize: 16,
-                                              
-                                            ),
-                                          ),
-                                        ),
-                                        Align(
-                                          alignment: Alignment.centerLeft,
-                                          child: Text(
-                                            '2:00 PM - Leo M.',
-                                            style: TextStyle(
-                                              color: Colors.black,
-                                              fontSize: 12.5,
-                                              
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                  Container(
-                                    padding: const EdgeInsets.all(10),
-                                    
-                                    decoration: const BoxDecoration(
-                                      color: AppColors.purpleDark,
-                                      shape: BoxShape.circle
-                                    ),
-                                    child: const Icon(
-                                      Icons.logo_dev,
-                                      color: Colors.black,
-                                    
-                                    ),
-                                    
-                                  )
-                                  
-                                ],
-                              )
-                            ],
-                          )
-                        ),
-                    
-                        
-                    
-                        
-                    
-                        
+                         ClassInfo(
+                          title: 'Development with Flutter',
+                          subtitle: '2:00 PM - Leo M.',
+                          icon: Icons.calculate,
+                          color: AppColors.purple,
+                          iconColor: AppColors.purpleDark,
+                         ),
                       ],
                     )
-                  
                   ],
                 )
               )
-
-              
             ],
           ),
         ),
       ),
+      bottomNavigationBar: const CustomBottomBar(),
     );
   }
 }
