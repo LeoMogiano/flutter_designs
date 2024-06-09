@@ -15,8 +15,18 @@ This design is inspired by the Bankly app. The design is a simple banking app th
 |:-----------------------:|:-----------------------:|
 | <img src="./screenshots/s1.png" width="200"> | <img src="./screenshots/s2.png" width="200"> |
 
+## 2. EducationApp
 
-## 2. Tic Tac Toe
+This design is inspired by the Education App. The design is a simple education app that allows users to view courses, view course schedule.
+
+## Screenshots
+
+| **Home** | **Course Schedule** |
+|:-----------------------:|:-----------------------:|
+| <img src="./screenshots/s3.png" width="200"> | <img src="./screenshots/s4.png" width="200"> |
+
+
+## 3. Tic Tac Toe
 
 This design is inspired by the Tic Tac Toe game. The design is a simple Tic Tac Toe game that allows users to play against each other.
 
@@ -24,4 +34,4 @@ This design is inspired by the Tic Tac Toe game. The design is a simple Tic Tac 
 
 | **Home** | **Game** |
 |:-----------------------:|:-----------------------:|
-| <img src="./screenshots/s3.png" width="200"> | <img src="./screenshots/s4.png" width="200"> |
+| <img src="./screenshots/s5.png" width="200"> | <img src="./screenshots/s6.png" width="200"> |
