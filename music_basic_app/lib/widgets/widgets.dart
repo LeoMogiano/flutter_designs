@@ -1,0 +1,1 @@
+export 'package:music_basic_app/widgets/dot_page.dart';
