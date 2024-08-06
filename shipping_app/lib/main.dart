@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shipping_app/config/app_theme.dart';
-import 'package:shipping_app/presentation/screens/home_screen.dart';
+import 'package:shipping_app/presentation/screens/initial_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -14,7 +14,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       theme: AppTheme.lightTheme,
       debugShowCheckedModeBanner: false,
-      home: const HomeScreen(),
+      home: const InitialScreen(),
     );
   }
 }
