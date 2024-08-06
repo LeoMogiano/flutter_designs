@@ -25,8 +25,18 @@ This design is inspired by the Education App. The design is a simple education a
 |:-----------------------:|:-----------------------:|
 | <img src="./screenshots/s3.png" width="200"> | <img src="./screenshots/s4.png" width="200"> |
 
+## 3. Delivery Basic App
 
-## 3. Tic Tac Toe
+This design is inspired by the Delivery Basic App. The design is a simple delivery app that allows users to view their orders.
+
+## Screenshots
+
+| **Initial Slider 1** | **Initial Slider 2** |
+|:-----------------------:|:-----------------------:|
+| <img src="./screenshots/s7.png" width="200"> | <img src="./screenshots/s8.png" width="200"> |
+
+
+## 4. Tic Tac Toe
 
 This design is inspired by the Tic Tac Toe game. The design is a simple Tic Tac Toe game that allows users to play against each other.
 
