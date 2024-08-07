@@ -31,9 +31,9 @@ This design is inspired by the Delivery Basic App. The design is a simple delive
 
 ## Screenshots
 
-| **Initial Slider 1** | **Initial Slider 2** |
-|:-----------------------:|:-----------------------:|
-| <img src="./screenshots/s7.png" width="200"> | <img src="./screenshots/s8.png" width="200"> |
+| **Initial Slider 1** | **Initial Slider 2** | **Home Screen** |
+|:-----------------------:|:-----------------------:|:-----------------------:|
+| <img src="./screenshots/s7.png" width="200"> | <img src="./screenshots/s8.png" width="200"> | <img src="./screenshots/s9.png" width="200"> |
 
 
 ## 4. Tic Tac Toe
