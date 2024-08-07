@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shipping_app/config/app_theme.dart';
-import 'package:shipping_app/presentation/screens/initial_screen.dart';
+import 'package:shipping_app/presentation/screens/screens.dart';
 
 void main() {
   runApp(const MainApp());
