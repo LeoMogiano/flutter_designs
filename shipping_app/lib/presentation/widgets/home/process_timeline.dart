@@ -18,7 +18,7 @@ class ProcessTimeline extends StatelessWidget {
     return Column(
       children: [
         SizedBox(
-          height: MediaQuery.of(context).size.height * 0.035,
+          height: MediaQuery.of(context).size.height * 0.0365,
           child: IntrinsicWidth(
             child: FixedTimeline.tileBuilder(
                 theme: TimelineTheme.of(context).copyWith(
