@@ -3,7 +3,7 @@ import 'package:timelines/timelines.dart';
 
 import 'package:shipping_app/config/configs.dart';
 
-class ProcessTimeline extends StatefulWidget {
+class ProcessTimeline extends StatelessWidget {
   const ProcessTimeline({
     super.key, 
     required this.processIndex, 
@@ -12,13 +12,6 @@ class ProcessTimeline extends StatefulWidget {
 
   final int processIndex;
   final List<String> processes;
-
-  @override
-  State<ProcessTimeline> createState() => _ProcessTimelineState();
-}
-
-class _ProcessTimelineState extends State<ProcessTimeline> {
-  final int _processIndex = 2;
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +35,7 @@ class _ProcessTimelineState extends State<ProcessTimeline> {
                             borderWidth: 5,
                             child: Container(
                               decoration: BoxDecoration(
-                                color: (index < _processIndex) ? AppColors.green : AppColors.lightDark,
+                                color: (index < processIndex) ? AppColors.green : AppColors.lightDark,
                                 border: Border.all(
                                   color: AppColors.lightDark,
                                   width: 2,
@@ -52,14 +45,12 @@ class _ProcessTimelineState extends State<ProcessTimeline> {
                               padding: const EdgeInsets.all(6),
                             ),
                           ),
-                          
-                          
                         ],
                       );
                   },
                   connectorBuilder: (_, index, type) {
                     return SizedBox(
-                     width: MediaQuery.of(context).size.width * 0.60 / (_processes.length - 1),
+                     width: MediaQuery.of(context).size.width * 0.59 / (processes.length - 1),
                       child: const DashedLineConnector(
                         color: AppColors.green,
                         dash: 3,
@@ -67,18 +58,18 @@ class _ProcessTimelineState extends State<ProcessTimeline> {
                       ),
                     );
                   },
-                  itemCount: _processes.length,
+                  itemCount: processes.length,
                 )),
           ),
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            for (var i = 0; i < _processes.length; i++)
+            for (var i = 0; i < processes.length; i++)
           Text(
-            _processes[i],
+            processes[i],
             style: TextStyle(
-              color: (i <= _processIndex) ? AppColors.green : AppColors.lightDark,
+              color: (i <= processIndex) ? AppColors.green : AppColors.lightDark,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -86,13 +77,5 @@ class _ProcessTimelineState extends State<ProcessTimeline> {
         )
       ],
     );
-      
   }
 }
-
-
-final _processes = [
-  'Picked',
-  'Delivery',
-  'Delivered',
-];
