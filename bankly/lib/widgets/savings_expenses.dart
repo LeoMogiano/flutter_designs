@@ -99,14 +99,14 @@ class _SavingsExpensesState extends State<SavingsExpenses> {
               ? const Color(0xFFE3FB0F)
               : const Color(0XFFC9C3F5),  
           ),
-          height: widget.phoneHeight * 0.2,
+          height: widget.phoneHeight * 0.190,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Stack(
                 children: [
                   AspectRatio(
-                    aspectRatio: 2.20,
+                    aspectRatio: 2.30,
                     child: Padding(
                       padding: const EdgeInsets.only(
                         right: 8,
