@@ -51,7 +51,7 @@ class FraganceWidget extends StatelessWidget {
           Container(
             padding: const EdgeInsets.symmetric(
               horizontal: 15,
-              vertical: 6,
+              vertical: 4,
             ),
             child: Row(
               mainAxisAlignment:MainAxisAlignment.spaceBetween,
@@ -64,7 +64,7 @@ class FraganceWidget extends StatelessWidget {
                       name,
                       style: const TextStyle(
                         color: Colors.black,
-                        fontSize: 18,
+                        fontSize: 17,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -72,7 +72,7 @@ class FraganceWidget extends StatelessWidget {
                       type,
                       style: const TextStyle(
                         color: Colors.black,
-                        fontSize: 12,
+                        fontSize: 13,
                       ),
                     ),
                   ],

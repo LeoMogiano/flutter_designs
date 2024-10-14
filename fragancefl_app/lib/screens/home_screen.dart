@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fragancefl_app/widgets/widgets.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -33,6 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Container(
                   margin: const EdgeInsets.only(top: 10, bottom: 20),
                   child: TextFormField(
+                    cursorColor:Colors.black,
                     style: const TextStyle(
                       color: Colors.black,
                       fontSize: 20,
@@ -54,9 +56,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         borderRadius: BorderRadius.circular(10),
                         borderSide: const BorderSide(color: Colors.black),
                       ),
-
                     ),
-                    cursorColor:Colors.black,
                   ),
                 ),
                 
@@ -98,7 +98,7 @@ class _HomeScreenState extends State<HomeScreen> {
           
           Expanded(
             child: Container(
-              padding: const EdgeInsets.all(30),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
               width: double.infinity,
               decoration: const BoxDecoration(
                 color: Colors.white,
@@ -110,28 +110,11 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Container(
-                    margin: const EdgeInsets.only(bottom: 24),
-                    child: RichText(
-                      text: const TextSpan(
-                        text: 'Popular',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                        ),
-                        children: [
-                          TextSpan(
-                            text: ' Collection',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 18,
-                              fontWeight: FontWeight.normal,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
+
+                  const CustomSubtitle(
+                    primaryText: 'Popular',
+                    secondaryText: 'Collection',
+                    margin: EdgeInsets.only(bottom: 24),
                   ),
                   
                   SingleChildScrollView(
@@ -142,7 +125,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         for (int i = 0; i < 4; i++)
                            const FraganceWidget(
                             image: 'assets/images/sauvage.png',
-                            name: 'SAUVAGE',
+                            name: 'Sauvage',
                             type: 'Eau de Parfum',
                             price: 120,
                            ),
@@ -150,12 +133,82 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
 
+                  const CustomSubtitle(
+                    primaryText: 'Recommended',
+                    secondaryText: 'Collection',
+                    margin: EdgeInsets.only(top: 20, bottom: 5),
+                  ),
+
+                 SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.25,
+                  width: double.infinity,
+                  child: SingleChildScrollView(
+                    padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+                    child: Column(
+                      children: [
+                        for (int i = 0; i < 4; i++)
+                          const ItemWidget(
+                            image: 'assets/images/sauvage.png',
+                            name: 'Sauvage',
+                            price: 120,
+                            type: 'Eau de Toilette',
+                            volume: 100,
+                          )
+                      ],
+                    ),
+                  ),
+                )
+                  
+
                 ],
               )
             ),
           )
         ],
       )
+    );
+  }
+}
+
+
+
+class CustomSubtitle extends StatelessWidget {
+  const CustomSubtitle({
+    super.key,
+    required this.primaryText,
+    required this.secondaryText,
+    required this.margin,
+  });
+
+  final String primaryText;
+  final String secondaryText;
+  final EdgeInsetsGeometry? margin;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: margin,
+      child: RichText(
+        text: TextSpan(
+          text: primaryText,
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 18,
+            fontWeight: FontWeight.w800,
+            fontFamily: GoogleFonts.cormorant().fontFamily
+          ),
+          children: [
+            TextSpan(
+              text: ' $secondaryText',
+              style: const TextStyle(
+                color: Colors.black,
+                fontSize: 18,
+                fontWeight: FontWeight.normal,
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
