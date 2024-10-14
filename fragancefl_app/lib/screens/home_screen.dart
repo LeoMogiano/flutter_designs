@@ -139,25 +139,25 @@ class _HomeScreenState extends State<HomeScreen> {
                     margin: EdgeInsets.only(top: 20, bottom: 5),
                   ),
 
-                 SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.25,
-                  width: double.infinity,
-                  child: SingleChildScrollView(
-                    padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
-                    child: Column(
-                      children: [
-                        for (int i = 0; i < 4; i++)
-                          const ItemWidget(
-                            image: 'assets/images/sauvage.png',
-                            name: 'Sauvage',
-                            price: 120,
-                            type: 'Eau de Toilette',
-                            volume: 100,
-                          )
-                      ],
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.25,
+                    width: double.infinity,
+                    child: SingleChildScrollView(
+                      padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+                      child: Column(
+                        children: [
+                          for (int i = 0; i < 4; i++)
+                            const ItemWidget(
+                              image: 'assets/images/sauvage.png',
+                              name: 'Sauvage',
+                              price: 120,
+                              type: 'Eau de Toilette',
+                              volume: 100,
+                            )
+                        ],
+                      ),
                     ),
-                  ),
-                )
+                  )
                   
 
                 ],
